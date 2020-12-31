@@ -69,7 +69,7 @@ function activate() {
   if(window.scrollY < 400){
     sectionSelect.style.display = "none";
   } else {
-    sectionSelect.style.display = "flex";    
+    sectionSelect.style.display = "flex";
   }
   // About Section
   if((window.scrollY > 400) && (window.scrollY < 1110)){

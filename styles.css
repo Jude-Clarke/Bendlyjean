@@ -74,17 +74,19 @@ nav {
   z-index: 2;
 }
 
-.logo {
-  transition: filter .15s linear;
-}
 .logo span {
   color: var(--black);
 }
-.logo:hover, a:hover {
-  filter: drop-shadow(2px 2px 2px #333333AB);
+.logo:hover {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+}
+a:hover {
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
 a {
   text-decoration: none;
+}
+.company a, .logo a, description a, table a {
   color: var(--ribbon-blue);
 }
 
@@ -127,7 +129,7 @@ a {
 /* TITLE PAGE */
 #title-page {
   width: 100%;
-  min-height: 92vh;
+  min-height: 92.3vh;
   overflow: hidden;
 }
 /* 92 */
@@ -227,6 +229,68 @@ th, td {
 }
 td {
   padding-left: 8px;
+}
+
+.wrapper .social-i {
+  color: var(--black);
+  display: inline-block;
+  height: calc(var(--base) * 3);
+  width: calc(var(--base) * 3);
+  float: left;
+  margin-right: 10px;
+  overflow: hidden;
+  background: var(--white);
+  border-radius: calc((var(--base) * 9.5) / 4);;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s ease-out;
+}
+.wrapper .social-i:hover {
+  width: calc(var(--base) * 9.5);
+  /* up to screen-width 906 */
+}
+.wrapper .social-i:hover .icon {
+  color: var(--white);
+  transition: all 0.3s ease-out;
+}
+.wrapper a:nth-child(3):hover .icon {
+  background-color: var(--ribbon-blue) !important;
+}
+.wrapper a:nth-child(2):hover .icon {
+  background-color: var(--accent) !important;
+}
+.wrapper a:nth-child(1):hover .icon {
+  background-color: var(--navy) !important;
+}
+
+.wrapper .social-i .icon {
+  display: inline-block;
+  height: calc(var(--base) * 3);
+  width: calc(var(--base) * 3);
+  text-align: center;
+  border-radius: 100%;
+  box-sizing: border-box;
+  line-height: calc(var(--base) * 3);
+}
+.wrapper .social-i .icon i {
+  font-size: calc(var(--base) * 1.25);
+  line-height: calc(var(--base) * 3);
+}
+.wrapper .social-i span {
+  font-size: var(--base);
+  font-weight: 500;
+  line-height: calc(var(--base) * 3);
+  margin-left: calc(var(--base) / 2);
+  transition: all 0.3s ease-out;
+}
+.wrapper a:nth-child(3):hover span {
+  color: var(--ribbon-blue) !important;
+}
+.wrapper a:nth-child(2):hover span {
+  color: var(--accent) !important;
+}
+.wrapper a:nth-child(1):hover span {
+  color: var(--navy) !important;
 }
 #services .description {
   background-color: var(--navy);
@@ -343,6 +407,7 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 1s ease;
 }
 .selection {
   height: 10px;
