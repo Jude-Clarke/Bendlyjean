@@ -13,6 +13,7 @@ const year = new Date().getFullYear()
 const copyright = document.querySelector(".date");
 copyright.textContent = year;
 
+
 hamburger.addEventListener("click", ()=> {
   navLinks.classList.toggle("open");
   navigationLinks.forEach(link => {
