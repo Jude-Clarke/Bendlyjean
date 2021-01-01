@@ -468,9 +468,9 @@ form textarea {
 }
 form button {
   padding: var(--base);
-  width: 33.33333%;
-  border-radius: 2px;
   font-size: var(--base);
+  width: 50%;
+  border-radius: 50px;
   background-color: var(--navy);
   color: var(--white)
   transition: all .2s ease;
@@ -635,6 +635,10 @@ footer a {
   }
   .title-text h1 {
     font-size: calc(var(--portrait_width) * 0.18);
+  }
+  form button {
+    width: 33.33333%;
+    border-radius: 2px;
   }
 }
 /* END OF DESKTOP WIDTH */
