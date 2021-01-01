@@ -24,19 +24,26 @@
   <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-  <div id="logo" class="logo scooter">
-    <a href="https://www.linkedin.com/in/bendly-jean-99a52174/" target="_blank"><h2><span>Bendly</span>Jean</h2></a>
-  </div>
-  <nav id="navigation" class="nav">
-    <div id="links">
-      <ul class="nav-links">
-        <li class="link"><a href="#about-me">About</a></li>
-        <li class="link"><a href="#services">Services</a></li>
-        <li class="link"><a href="#companies">Companies</a></li>
-        <li class="link"><a href="#book-a-call" class="btn">Contact Me</a></li>
-      </ul>
+  <div class="mobile-nav">
+    <div id="logo" class="logo scooter">
+      <a href="https://www.linkedin.com/in/bendly-jean-99a52174/" target="_blank"><h2><span>Bendly</span>Jean</h2></a>
     </div>
-  </nav>
+    <nav id="navigation" class="nav">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div id="links">
+        <ul class="nav-links">
+          <li class="link"><a href="#about-me">About</a></li>
+          <li class="link"><a href="#services">Services</a></li>
+          <li class="link"><a href="#companies">Companies</a></li>
+          <li class="link"><a href="#book-a-call" class="btn">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <main>
     <section id="title-page">
       <div class="description">
@@ -44,13 +51,14 @@
           <div class="title-text">
             <h1>Private Equity<br>Investor</h1>
             <h3>Small and medium-sized enterprises</h3>
+            <img src="images/bendly-jean-mobile.png" alt="Bendly Jean" class="mobile-pic fade-in">
             <p>Former Investment Banker now seeking to add value to your business.</p>
-            <a href="#book-a-call"><button class="cta">Book a Call</button></a>
+            <a href="#book-a-call" class="cta-link"><button class="cta">Book a Call</button></a>
           </div>
           <img src="images/bendly-jean-flipped.png" alt="Bendly Jean" class="portrait fade-in">
         </div>
       </div>
-      <div class="info background-color">
+      <div class="background-color">
 
       </div>
     </section>
@@ -138,6 +146,13 @@
           <p>A private equity firm that focuses on acquiring, funding, and adding value to companies that are positioned for growth.</p>
         </div>
       </div>
+      <div id="consultation" class="info mobile">
+        <div class="info-content">
+          <h2>Consultation</h2>
+          <h3>Do you have a Company you'd want to scale or exit?</h3>
+          <p>At Ribbon Equity, we invest, fund, and partner with remarkable businesses poised for growth. Do you have a deal to share with me?</p>
+        </div>
+     </div>
     </section>
     <section id="book-a-call" class="section-title">
       <div class="description desc">
@@ -152,7 +167,7 @@
           <button type="submit" class="btn submit">Send Message</button>
         </form>
       </div>
-      <div id="consultation" class="info">
+      <div id="consultation" class="info desktop">
         <div class="info-content">
           <h2>Consultation</h2>
           <h3>Do you have a Company you'd want to scale or exit?</h3>

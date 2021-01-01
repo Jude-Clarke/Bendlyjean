@@ -2,6 +2,29 @@ let up;
 const links = document.querySelectorAll("a");
 const sectionSelect = document.querySelector("#section-select");
 const selections = document.querySelectorAll(".selection");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const navigationLinks = document.querySelectorAll(".nav-links .link");
+
+hamburger.addEventListener("click", ()=> {
+  navLinks.classList.toggle("open");
+  navigationLinks.forEach(link => {
+    link.classList.toggle("fade");
+  });
+});
+
+for(var i = 0; i < navigationLinks.length; i ++){
+  navigationLinks[i].addEventListener("click", ()=> {
+    navLinks.classList.toggle("open");
+    navigationLinks.forEach(link => {
+      link.classList.toggle("fade");
+    });
+  });
+};
+
+if(screen.width < "2000px") {
+  sectionSelect.style.display = "none";
+}
 
 // window.onscroll = function(e) {
 //   if(this.oldScroll > this.scrollY){
@@ -66,7 +89,7 @@ window.addEventListener('scroll', activate);
 
 function activate() {
   console.log(window.scrollY);
-  if(window.scrollY < 400){
+  if(window.scrollY < 300){
     sectionSelect.style.display = "none";
   } else {
     sectionSelect.style.display = "flex";
