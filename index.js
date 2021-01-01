@@ -5,6 +5,9 @@ const selections = document.querySelectorAll(".selection");
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navigationLinks = document.querySelectorAll(".nav-links .link");
+const aboutMeH1 = document.querySelector("#about-me h1");
+const servicesH1 = document.querySelector("#services h1");
+const bookACallH1 = document.querySelector("#book-a-call h1");
 
 hamburger.addEventListener("click", ()=> {
   navLinks.classList.toggle("open");
@@ -96,6 +99,8 @@ function activate() {
   }
   // About Section
   if((window.scrollY > 400) && (window.scrollY < 1110)){
+    aboutMeH1.style.transform = "translateX(0)";
+    aboutMeH1.style.opacity = ".2";
     for(var i = 0; i < selections.length; i++){
       selections[i].classList.remove("active");
     };
@@ -103,6 +108,8 @@ function activate() {
   }
   // Services Section
   if((window.scrollY > 1110) && (window.scrollY < 1805)){
+    servicesH1.style.transform = "translateX(0)";
+    servicesH1.style.opacity = ".3";
     for(var i = 0; i < selections.length; i++){
       selections[i].classList.remove("active");
     };
@@ -110,6 +117,9 @@ function activate() {
   }
   // Book-a-Call Section
   if(window.scrollY > 1805){
+    bookACallH1.classList.add("bounce");
+    bookACallH1.style.opacity ="1";
+    bookACallH1.style.transform ="scale(1)";
     for(var i = 0; i < selections.length; i++){
       selections[i].classList.remove("active");
     };

@@ -316,7 +316,10 @@ a {
   padding-bottom: 48px;
 }
 #about-me h1 {
-  opacity: .2;
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: opacity 2s ease;
+  transition: transform .5s ease;
 }
 th, td {
   text-align: left;
@@ -404,7 +407,10 @@ td {
   padding-bottom: 48px;
 }
 #services h1 {
-  opacity: .3;
+  opacity: 0;
+  transform: translateX(-1000px);
+  transition: opacity 2s ease;
+  transition: transform .5s ease;
 }
 #services h3 {
   font-size: calc(var(--base) * 1.5);
@@ -440,6 +446,9 @@ ul {
   font-size: calc(var(--base) * 3);
   margin-top: calc(20% - calc(var(--base) * 3));
   margin-bottom: var(--base);
+  opacity: 0;
+  transform: scale(.01);
+
 }
 
 form label {
@@ -508,7 +517,7 @@ footer a {
   color: var(--white30);
 }
 .policy-terms a {
-  margin: 0 40px;
+  margin: 0 30px;
 }
 
 #section-select {
@@ -642,6 +651,14 @@ footer a {
 
 
 /* ANIMATIONS */
+.bounce {
+  animation: bounce ease .5s;
+}
+@keyframes bounce {
+  0% {transform: scale(.05);}
+  80% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
 .scooter {
 	animation: scoot ease .8s;
   transform-origin: bottom;
