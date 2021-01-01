@@ -436,7 +436,8 @@ ul {
 }
 
 #book-a-call {
-  height: 92vh;
+  min-height: 92vh;
+  height: 100%;
 }
 #book-a-call .description {
   min-width: 350px;

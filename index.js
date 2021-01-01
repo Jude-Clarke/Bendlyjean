@@ -91,7 +91,6 @@ if(screen.width < "2000px") {
 window.addEventListener('scroll', activate);
 
 function activate() {
-  console.log(window.scrollY);
   if(window.scrollY < 300){
     sectionSelect.style.display = "none";
   } else {
