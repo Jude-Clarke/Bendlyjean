@@ -9,6 +9,10 @@ const aboutMeH1 = document.querySelector("#about-me h1");
 const servicesH1 = document.querySelector("#services h1");
 const bookACallH1 = document.querySelector("#book-a-call h1");
 
+const year = new Date().getFullYear()
+const copyright = document.querySelector(".date");
+copyright.textContent = year;
+
 hamburger.addEventListener("click", ()=> {
   navLinks.classList.toggle("open");
   navigationLinks.forEach(link => {
