@@ -258,7 +258,8 @@ a {
 }
 .cta:hover {
   cursor: pointer;
-  padding: 11px 33px;
+  transform: scale(1.05);
+  padding: 10px 31px;
   filter: drop-shadow(6px 3px 6px rgba(0, 0, 0, 0.25));
 }
 .portrait {
