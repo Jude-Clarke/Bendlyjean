@@ -243,6 +243,7 @@ a {
 .cta-link {
   width: 100%;
   color: black;
+  font-weight: bold;
 }
 .cta {
   padding: 10px 31px;
@@ -468,7 +469,8 @@ form textarea {
   line-height: calc(var(--base) * 1.2);
 }
 .form-btn {
-  padding-bottom: 5px;
+  padding: 12px !important;
+  line-height: 12px !important;
   font-size: 12px;
   border-radius: 50px;
   border: 1px solid transparent;
