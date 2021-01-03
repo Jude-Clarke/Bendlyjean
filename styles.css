@@ -468,7 +468,7 @@ form textarea {
   line-height: calc(var(--base) * 1.2);
 }
 .form-btn {
-  padding-bottom: 1px;
+  padding-bottom: 5px;
   font-size: 12px;
   border-radius: 50px;
   border: 1px solid transparent;
