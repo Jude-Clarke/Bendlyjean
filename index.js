@@ -8,6 +8,8 @@ const navigationLinks = document.querySelectorAll(".nav-links .link");
 const aboutMeH1 = document.querySelector("#about-me h1");
 const servicesH1 = document.querySelector("#services h1");
 const bookACallH1 = document.querySelector("#book-a-call h1");
+const form = document.querySelector("#contact-form");
+const inputs = document.querySelectorAll("input");
 
 const year = new Date().getFullYear()
 const copyright = document.querySelector(".date");
@@ -129,4 +131,41 @@ function activate() {
     };
     selections[3].classList.add("active");
   }
+}
+
+
+// Success message
+function success() {
+  const senderName = document.querySelector("#sender_name");
+  const firstName = senderName.value.split(" ")[0];
+  form.style.marginTop = "50px";
+  form.innerHTML = "<h3>Thank you for your message, " + firstName + ". Make sure to check your email for my response.</h3>";
+}
+function failure() {
+  const senderName = document.querySelector("#sender_name");
+  const firstName = senderName.value.split(" ")[0];
+  form.style.marginTop = "50px";
+  form.innerHTML = "<h3>Sorry, " + firstName + ". It seems that didn't go through. Send me a message at <a style='color: var(--white); text-decoration: underline;' href='mailto:info@ribbonequity.com'>info@ribbonequity.com</a></h3>";
+}
+
+// Emailjs code
+(function(){
+   emailjs.init("user_jKntaHbJSFaVC4HKcUPnu");
+})();
+
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // generate a five digit number for the contact_number variable
+    this.contact_number.value = Math.random() * 100000 | 0;
+    // these IDs from the previous steps
+    emailjs.sendForm('service_18h19vu', 'contact_form', this, 'user_jKntaHbJSFaVC4HKcUPnu')
+      .then(function() {
+          console.log('SUCCESS!');
+          success();
+      }, function(error) {
+          failure();
+          console.log('FAILED...', error);
+      });
+});
 }

@@ -78,7 +78,6 @@ p a:hover {
 
 @media only screen and (max-width: 600px) {
 
-
   .line {
     width: 30px;
     height: 3px;
@@ -151,7 +150,7 @@ nav {
 .logo span {
   color: var(--white);
 }
-.logo:hover {
+.logo a:hover {
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 a:hover {
@@ -206,7 +205,7 @@ a {
 /* TITLE PAGE */
 #title-page {
   width: 100%;
-  min-height: 86.7vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 /* 92 */
@@ -214,7 +213,6 @@ a {
   min-height: calc(92vh - (var(--portrait_width) * 0.58));
 }
 .title-text {
-  margin-top: calc(var(--portrait_width) * 0.58);
   position: absolute;
   top: 24vh;
   text-align: center;
@@ -468,14 +466,18 @@ form textarea {
   margin-bottom: 10px;
   line-height: calc(var(--base) * 1.2);
 }
-form button {
-  padding: var(--base);
-  font-size: var(--base);
-  width: 50%;
+.form-btn {
+  padding-bottom: 1px;
+  font-size: 12px;
   border-radius: 50px;
+  border: 1px solid transparent;
   background-color: var(--navy);
-  color: var(--white)
+  color: var(--white);
   transition: all .2s ease;
+  cursor: pointer;
+}
+.form-btn:hover {
+  border-color: var(--white);
 }
 form button:hover {
   cursor: pointer;
@@ -587,11 +589,15 @@ footer a {
   .nav-links .link {
     margin: 22px 0 0 8%;
   }
+  #title-page {
+    min-height: 86.7vh;
+  }
   .title-text {
     top: 50vh;
-    margin: calc(-1 * (var(--portrait_width) / 2)) 0 0 0;
-    width: 100%;
+    margin: calc(-1 * (var(--portrait_width) / 1.8)) 0 0 0;
     left: auto;
+    width: calc(var(--portrait_width) * 2);
+    text-align: left;
   }
   .title-text h3 {
     font-size: var(--base);
@@ -631,16 +637,12 @@ footer a {
   .background-color {
     display: block;
   }
-  .title-text {
-    width: calc(var(--portrait_width) * 2);
-    text-align: left;
-  }
   .title-text h1 {
     font-size: calc(var(--portrait_width) * 0.18);
   }
-  form button {
-    width: 33.33333%;
+  .form-btn {
     border-radius: 2px;
+    padding-bottom: 0;
   }
 }
 /* END OF DESKTOP WIDTH */

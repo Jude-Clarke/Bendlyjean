@@ -12,16 +12,16 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- End of Jason's boiler plate -->
   <title>Bendly Jean | Private Equity Investor | SME Funding & Acquisitions</title>
-  <meta name="description" content="Consultations: Mergers & Aquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning. Bendly Jean is the founder of L.A. based Ribbon Equity.">
+  <meta name="description" content="Consultations: Mergers & Acquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning. Bendly Jean is the founder of L.A. based Ribbon Equity.">
        <!-- .............................OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- Social media essential sharing tags -->
     <meta property="og:title" content="Bendly Jean | Private Equity Investor | SME Funding & Acquisitions">
-    <meta property="og:description" content="Consultations: Mergers & Aquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning. Bendly Jean is the founder of L.A. based Ribbon Equity.">
+    <meta property="og:description" content="Consultations: Mergers & Acquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning. Bendly Jean is the founder of L.A. based Ribbon Equity.">
     <meta property="og:image" content="images/bendly-jean-transparent-bg.png">
-    <meta name="twitter:card" content="Mergers & Aquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning">
+    <meta name="twitter:card" content="Mergers & Acquisitions | Scale and Growth | Business Valuation | Exit Strategy Planning">
   <!-- FAVICON.IO -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -29,31 +29,7 @@
   <link rel="manifest" href="site.webmanifest">
   <!-- Calendly Pop Up -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <!-- Email JS Script -->
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("USER_ID");
-   })();
-</script>
-<script type="text/javascript">
-    window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('service_buwap2b', 'template_0znhxuv', this, 'user_WC7Xvrlt9xmn9gWVYMbBV')
-          .then(function() {
-              console.log('SUCCESS!');
-          }, function(error) {
-              console.log('FAILED...', error);
-          });
-    });
-  }
-    </script>
+
 </head>
 <body>
   <div class="mobile-nav">
@@ -85,7 +61,7 @@
             <h3>Small and medium-sized enterprises</h3>
             <img src="images/bendly-jean-mobile.png" alt="Bendly Jean" class="mobile-pic fade-in">
             <p>Former Commercial & Investment Banker now seeking to add value to your business.</p>
-            <a href="" class="cta-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masterkeydev/free-consultation?background_color=ebeff0&text_color=031442&primary_color=004bd1'});return false;"><button class="cta"><!-- Calendly link widget begin -->
+            <a href="" class="cta-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bendly/introduction-call-podcast-details'});return false;"><button class="cta"><!-- Calendly link widget begin -->
             <!-- Calendly link widget end -->Book A Call</button></a>
           </div>
           <img src="images/bendly-jean-flipped.png" alt="Bendly Jean" class="portrait fade-in">
@@ -132,18 +108,19 @@
                 <span>LinkedIn</span>
               </div>
             </a>
-            <a href="https://www.instagram.com/bendly_/" target="_blank">
+            <!-- <a href="https://www.instagram.com/bendly_/" target="_blank">
               <div class="use-flex social-i">
                 <div class="icon"><i class="fab fa-instagram"></i></div>
                 <span>Instagram</span>
               </div>
-            </a>
+            </a> -->
+            <!--
             <a href="https://www.facebook.com/bendly.jean" target="_blank">
               <div class="use-flex social-i">
                 <div class="icon"><i class="fab fa-facebook-f"></i></div>
                 <span>Facebook</span>
               </div>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -197,16 +174,16 @@
         <form id="contact-form">
           <input type="hidden" name="contact_number">
           <label>Your Name</label>
-          <input type="text" name="user_name">
+          <input type="text" name="user_name" id="sender_name" required>
           <label>Your Email</label>
-          <input type="email" name="user_email">
+          <input type="email" name="user_email" required>
           <label>How can I help?</label>
-          <textarea name="message"cols="30" rows="6"></textarea>
+          <textarea name="message"cols="30" rows="6" required></textarea>
           <h3>
           <!-- <button type="button" name="button" class="btn submit"> -->
-            <input type="submit" value="Send">
+            <input type="submit" value="Send" class="form-btn">
           <!-- </button> -->
-          OR <a href="" style="margin-left:10px" class="cta-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/masterkeydev/free-consultation?background_color=ebeff0&text_color=031442&primary_color=004bd1'});return false;"><button class="cta"><!-- Calendly link widget begin -->
+          OR <a href="" style="margin-left:10px" class="cta-link" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bendly/introduction-call-podcast-details'});return false;"><button class="cta"><!-- Calendly link widget begin -->
           <!-- Calendly link widget end -->Book A Call</button></a></h3>
         </form>
         <!-- <form  id="contact-form">
@@ -247,10 +224,15 @@
     <a href="#services"><div class="selection"></div></a>
     <a href="#book-a-call"><div class="selection"></div></a>
   </div>
-  <script src="index.js" charset="utf-8"></script>
   <script src="https://kit.fontawesome.com/0bf8d7b0c4.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
   <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <!-- Email JS Script -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+</script>
+<script src="index.js" charset="utf-8"></script>
+
 </body>
 </html>
